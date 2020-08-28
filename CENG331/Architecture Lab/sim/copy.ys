@@ -1,0 +1,55 @@
+#Rabia Varol
+#2237881
+
+.pos 0
+
+	irmovq Stack, %rsp
+	call main
+	halt
+
+.align 8
+# Source block 
+src: 
+	    .quad 0x00a 
+	    .quad 0x0b0 
+	    .quad 0xc00 
+
+# Destination block 
+dest: 
+	    .quad 0x111 
+	    .quad 0x222 
+	    .quad 0x333
+
+main:
+	
+	irmovq src, %rdi
+	irmovq dest, %rsi
+	irmovq $0x3, %rdx   # len = 3
+	call copy_block
+	ret
+
+copy_block:
+
+	xorq %rax, %rax    # result = 0
+	irmovq $0x8, %r8   # constant 8
+	irmovq $0x1, %r9   # constant 1
+	andq %rdx, %rdx    # test len 
+	jne while_loop 	   # do not enter the while loop
+	ret
+
+while_loop:
+
+	mrmovq (%rdi), %rcx   
+	addq %r8, %rdi        
+	rmmovq %rcx, (%rsi)	  
+	addq %r8, %rsi        
+	xorq %rcx, %rax       
+	subq %r9, %rdx		  
+	andq %rdx, %rdx
+	jne while_loop 
+	ret 
+	
+.pos 0x200
+
+Stack:
+
