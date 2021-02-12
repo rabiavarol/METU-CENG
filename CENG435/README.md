@@ -1,4 +1,4 @@
-# Basic Socket Programming in Python
+# Socket Programming in Python
 Two scripts (server.py and client.py) were written for transferring large files by chunks with MSS from client side to server side.
 
 To run server.py:
