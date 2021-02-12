@@ -9,7 +9,7 @@ This repository contains my homeworks of some courses at METU/CENG.
    
   **CENG351 - Data Management and File Structures** : Java
 
-  **CENG351 - Data Communication and Networking** : Python
+  **CENG435 - Data Communication and Networking** : Python
   
   **CENG477 - Introduction to Computer Graphics** : C++, OpenGL
   
