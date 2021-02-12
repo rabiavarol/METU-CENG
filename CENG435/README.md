@@ -24,8 +24,8 @@ While implementing TCP application I followed the following steps:
 - On the server side:
     1. Create a TCP socket, bind it to server listener port and start to listen.
     2. Wait the client and when it comes, create new connection socket.
-    3. Start timer of TCP transmission
-    3. Get 1000 bytes packets. Since TCP is reliable and provides in-order
+    3. Start timer of TCP transmission.
+    3. Get 1000 bytes packets. Since TCP is reliable and provides in-order.
     byte-stream, there is no need to handle packet corruption, delaying/reordering.
     4. Extract sending time information from it and measure the receiving time.
     5. Calculate transmission time and record it in an array to be able to calculate average transmission time of all transmitted packets.
@@ -39,17 +39,17 @@ Since UDP is unreliable, we had to deal with possible packet/ACK delays and corr
 
 - On the client side:
     1. Create a UDP socket, bind to client port for incoming messages from the server.
-    2. Set timeout to detect packet/ACK losts
+    2. Set timeout to detect packet/ACK losts.
     3. Send packet with sendto() method by every time specifying server address and listening port. This is because UDP is connectionless.
     3. Read 960 bytes chunks from the file to be transferred, measure the sending time, sequence number and checksum with each chuck.
-    4. Keep sending each packet until its ACK received (retransmit if timeout occurs) 
+    4. Keep sending each packet until its ACK received (retransmit if timeout occurs).
     5. Ignore duplicate ACKs.
-    6. Retransmit packet if its ACK is corrupted
+    6. Retransmit packet if its ACK is corrupted.
 
 - On the server side:
-    1. Create a UDP socket, bind it to server listener port
+    1. Create a UDP socket, bind it to server listener port.
     2. Receive packet from the client, check if it is the one the server awaits and if received checksum and currently calculated checksum match. If it is correct packet transmitted w/o corruption, send its ACK to the client.
-    3. If duplicate packet is detected, send its ACK
+    3. If duplicate packet is detected, send its ACK.
 
 
 
