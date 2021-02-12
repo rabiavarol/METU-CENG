@@ -8,3 +8,9 @@ This repository contains my homeworks of some courses at METU/CENG.
   **CENG331 - Computer Organization** : x86-64 Assembly, C
    
   **CENG351 - Data Management and File Structures** : Java
+
+  **CENG351 - Data Communication and Networking** : Python
+  
+  **CENG477 - Introduction to Computer Graphics** : C++, OpenGL
+  
+  
