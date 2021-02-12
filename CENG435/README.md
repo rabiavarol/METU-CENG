@@ -35,7 +35,7 @@ Since the server often does not receive all 1000 bytes at a time, I tackled this
     
 ----------------------- UDP -----------------------
 
-Since UDP is unreliable, we had to deal with possible packet/ACK delays, corruptions. That is, on top of the UDP I tried to implement RDT 3.0.
+Since UDP is unreliable, we had to deal with possible packet/ACK delays and corruptions. That is, on top of the UDP I implemented a RDT 3.0 protocol.
 
 - On the client side:
     1. Create a UDP socket, bind to client port for incoming messages from the server.
