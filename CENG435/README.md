@@ -7,8 +7,11 @@ To run client.py:
     python3 client.py <server_address> <udp_server_listener_port> <tcp_server_listener_port> <udp_client_sender_port> <tcp_client_sender_port> <protocol_no>
 
 for TCP, protocol_no = 0
+
 for UDP, protocol_no = 1
+
 ----------------------- TCP ------------------------------------------
+
 As TCP is a connection oriented protocol (server must create socket for incoming request from client), you should first start server side, then start client side.
 
 While implementing TCP application I followed the following steps:
