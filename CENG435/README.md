@@ -1,4 +1,4 @@
-Two scripts (server.py and client.py) were written for transferring large files by chunks with MSS from client side to server side. Firstly, transmission of TCP packets. After TCP communication done, transmission of UDP packets.
+Two scripts (server.py and client.py) were written for transferring large files by chunks with MSS from client side to server side.
 
 To run server.py:
     python3 server.py <udp_server_listener_port> <tcp_server_listener_port> <protocol_no>
