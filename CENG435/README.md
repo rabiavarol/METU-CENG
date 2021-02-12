@@ -34,6 +34,7 @@ While implementing TCP application I followed the following steps:
 Since the server often does not receive all 1000 bytes at a time, I tackled this problem by cumulating received small packets until the total packet size becomes 1000 bytes.  
     
 ----------------------- UDP -----------------------
+
 Since UDP is unreliable, we had to deal with possible packet/ACK delays, corruptions. That is, on top of the UDP I tried to implement RDT 3.0.
 
 - On the client side:
