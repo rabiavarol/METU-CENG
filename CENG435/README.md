@@ -10,7 +10,7 @@ for TCP, protocol_no = 0
 
 for UDP, protocol_no = 1
 
------------------------ TCP ------------------------------------------
+----------------------- TCP -----------------------
 
 As TCP is a connection oriented protocol (server must create socket for incoming request from client), you should first start server side, then start client side.
 
@@ -33,8 +33,7 @@ While implementing TCP application I followed the following steps:
 
 Since the server often does not receive all 1000 bytes at a time, I tackled this problem by cumulating received small packets until the total packet size becomes 1000 bytes.  
     
-
------------------------------- UDP --------------------------------------
+----------------------- UDP -----------------------
 Since UDP is unreliable, we had to deal with possible packet/ACK delays, corruptions. That is, on top of the UDP I tried to implement RDT 3.0.
 
 - On the client side:
