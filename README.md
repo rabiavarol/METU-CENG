@@ -1,5 +1,5 @@
-# METU/CENG
-This repository contains my homeworks of some courses at METU/CENG.
+# METU-CENG
+This repository contains my homeworks of some courses at METU-CENG.
 
   **CENG213 - Data Structures** : C++
   
@@ -12,5 +12,3 @@ This repository contains my homeworks of some courses at METU/CENG.
   **CENG435 - Data Communication and Networking** : Python
   
   **CENG477 - Introduction to Computer Graphics** : C++, OpenGL
-  
-  
